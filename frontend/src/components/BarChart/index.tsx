@@ -1,5 +1,3 @@
-
-import { type } from 'node:os';
 import Chart from 'react-apexcharts';
 
 const BarChart = () => {
