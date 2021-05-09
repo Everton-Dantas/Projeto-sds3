@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { SalePage } from "types/sale";
-import { isTemplateExpression } from "typescript";
+import Pagination from "components/Pagination"
 import { formatLocalDate } from "utils/format";
 import { BASE_URL } from "utils/requests";
 
@@ -29,6 +29,8 @@ const DataTable= () => {
 },[]);
    
     return (
+        <>
+        <Pagination page={page} />
         <div className="table-responsive">
         <table className="table table-striped table-sm">
             <thead>
@@ -53,7 +55,7 @@ const DataTable= () => {
             </tbody>
         </table>
     </div>
-
+</>
     );  
       
     
